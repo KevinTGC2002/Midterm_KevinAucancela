@@ -9,6 +9,9 @@ import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductAlertsComponent } from "./product-alerts/product-alerts.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { ResumeComponent } from "./resume/resume.component";
+import { ServiceCartService } from "./service-cart.service";
+import { CartService } from "./cart.service";
+import { CartComponent } from "./cart/cart.component";
 
 @NgModule({
   imports: [
@@ -17,7 +20,8 @@ import { ResumeComponent } from "./resume/resume.component";
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailsComponent },
-      { path: "resume", component: ResumeComponent }
+      { path: "resume", component: ResumeComponent },
+      { path: "cart", component: CartComponent }
     ])
   ],
   declarations: [
@@ -26,9 +30,11 @@ import { ResumeComponent } from "./resume/resume.component";
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    ResumeComponent
+    ResumeComponent,
+    CartComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [CartService]
 })
 export class AppModule {}
 
