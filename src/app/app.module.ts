@@ -12,17 +12,18 @@ import { ResumeComponent } from "./resume/resume.component";
 import { ServiceCartService } from "./service-cart.service";
 import { CartService } from "./cart.service";
 import { CartComponent } from "./cart/cart.component";
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: "", component: ProductListComponent },
-      { path: "products/:productId", component: ProductDetailsComponent },
-      { path: "resume", component: ResumeComponent },
-      { path: "cart", component: CartComponent }
+      { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
@@ -31,13 +32,14 @@ import { CartComponent } from "./cart/cart.component";
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    ResumeComponent,
-    CartComponent
+    CartComponent,
+    ShippingComponent
   ],
-  bootstrap: [AppComponent],
-  providers: [CartService]
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule {}
+export class AppModule { }
 
 /*
 Copyright Google LLC. All Rights Reserved.
