@@ -8,11 +8,11 @@ import { TopBarComponent } from "./top-bar/top-bar.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductAlertsComponent } from "./product-alerts/product-alerts.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
-import { ResumeComponent } from "./resume/resume.component";
 import { ServiceCartService } from "./service-cart.service";
 import { CartService } from "./cart.service";
 import { CartComponent } from "./cart/cart.component";
 import { ShippingComponent } from './shipping/shipping.component';
+import { GraphicsComponent } from './graphics/graphics.component';
 
 @NgModule({
   imports: [
@@ -24,6 +24,7 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'graphic', component: GraphicsComponent },
     ])
   ],
   declarations: [
@@ -33,7 +34,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    GraphicsComponent
   ],
   bootstrap: [
     AppComponent

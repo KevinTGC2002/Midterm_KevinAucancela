@@ -26,4 +26,7 @@ constructor(
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
+    getGraphicDesignPortfolio() {
+    return this.http.get('/assets/Graphic.json');
+  }
 }
